@@ -1,0 +1,502 @@
+:root {
+  --primary-color: #4a4a4a;
+  --accent-color: #d4a373;
+  --light-bg: #f5f5f5;
+  --dark-bg: #333;
+  --text-color: #ffffff;
+  --overlay-bg: rgba(74, 74, 74, 0.7);
+  --container-bg: rgba(255, 255, 255, 0.8);
+  --font-main: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/spa.jpg') center/cover no-repeat fixed;
+  filter: blur(8px);
+  /* Apply blur here */
+  z-index: -1;
+  /* Keeps the blur behind the content */
+}
+
+.logo {
+  font-size: 35px;
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.logo:link,
+.logo:visited {
+  color: var(--text-color);
+}
+
+.search {
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.nav {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  justify-content: center;
+}
+
+.right {
+  margin-left: auto;
+}
+
+.cart-icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.search-input {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  padding: 0.6rem;
+  border-radius: 4px;
+  width: 350px;
+  height: 30px;
+  font-size: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url('images/spa.jpg') center/cover no-repeat fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 5.5rem;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+/* Arrow container */
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+/* Arrow styling */
+.arrow-head {
+  width: 64px;
+  height: 64px;
+  border-left: 6px solid white;
+  border-bottom: 6px solid white;
+  transform: rotate(-45deg);
+  margin-bottom: -100px;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for the arrow */
+.scroll-down:hover {
+  transform: translateY(5px) rotate(-45deg);
+  filter: blur(2px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Bounce animation */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    transform: translate(-50%, -10px);
+  }
+}
+
+section {
+  position: relative;
+  padding: 50px 20px;
+  color: var(--text-color);
+  text-align: center;
+}
+
+section p {
+  font-size: 20px;
+}
+
+.about-title {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-left: 195px;
+  text-underline-offset: 10px;
+  text-decoration: none;
+  padding-bottom: 8px;
+}
+
+.about-title:hover {
+  color: #7d7d7d !important;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.about-title:link,
+.about-title:visited {
+  color: var(--text-color);
+}
+
+.about-us h2 {
+  font-size: 50px;
+}
+
+.sets-us-apart h2 {
+  font-size: 50px;
+}
+
+/* Background Image Effect */
+.about-us {
+  position: relative;
+  background: url('images/spa1.jpg') center/cover no-repeat fixed;
+}
+
+.sets-us-apart {
+  position: relative;
+  background: url('images/spa2.jpg') center/cover no-repeat fixed;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Darkening Overlay Effect */
+.about-us::before,
+.sets-us-apart::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+  z-index: 0;
+}
+
+.about-us:hover::before {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.sets-us-apart:hover::before {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.about-us .content,
+.sets-us-apart .content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Flexbox Layout for grey containers */
+.sets-us-apart {
+  text-align: center;
+  padding: 1rem;
+}
+
+.container-row {
+  display: flex;
+  gap: 20px;
+  /* space between each container */
+  padding: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* allows wrapping on smaller screens */
+}
+
+.grey-container {
+  background-color: rgba(34, 34, 34, 0.8);
+  box-shadow: 0 5px 8px 4px #000000c7;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 30%;
+  text-align: center;
+  color: white;
+}
+
+.grey-container ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+  font-size: 25px;
+}
+
+.grey-container li {
+  margin: 0.5rem 0;
+}
+
+.about-us .content .sets-us-apart {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.content {
+  font-size: 30px;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  position: relative;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  z-index: 1;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.124) 10%,
+      rgba(0, 0, 0, 0.6) 100%),
+    url('images/spa2.jpg') center/cover no-repeat fixed;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+footer .hours {
+  font-size: 30px;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  /* space between icons */
+  margin-top: 1rem;
+}
+
+footer .icon {
+  width: 32px;
+  /* adjust size as needed */
+  height: 32px;
+  filter: brightness(0) invert(1);
+  /* makes icons white */
+}
+
+footer p {
+  margin: 0.3rem 0;
+  font-size: 25px;
+}
+
+footer .copyright {
+  margin-top: 40px;
+}
+
+/* Default styling for larger screens (1200px and above) */
+@media (min-width: 1200px) {
+  /* No changes needed if the original design is already suitable for large screens */
+}
+
+/* For medium screens (up to 1200px) */
+@media (max-width: 1200px) {
+
+  /* Adjust font sizes and container widths */
+  .hero-content h1 {
+    font-size: 4.5rem;
+  }
+
+  .about-us h2,
+  .sets-us-apart h2 {
+    font-size: 40px;
+  }
+
+  .grey-container {
+    width: 45%;
+  }
+
+  footer .hours,
+  footer p,
+  .search-input {
+    font-size: 22px;
+  }
+}
+
+/* For smaller screens (up to 800px) */
+@media (max-width: 821px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Ensure .search and its contents are centered */
+  .search,
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem 0;
+    width: 100%;
+    /* Full width for centering */
+  }
+
+  .search-input {
+    width: 200px;
+    font-size: 18px;
+  }
+
+  .cart-icon {
+    font-size: 1.5rem;
+    margin-left: 10px;
+  }
+
+  .about-title {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .container-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .grey-container {
+    width: 90%;
+  }
+
+  .about-us h2,
+  .sets-us-apart h2 {
+    font-size: 35px;
+  }
+
+  .search-input {
+    width: 200px;
+    font-size: 18px;
+    align-items: center;
+  }
+
+  footer .hours,
+  footer p {
+    font-size: 20px;
+  }
+}
+
+/* For extra small screens (up to 500px) */
+@media (max-width: 500px) and (max-width: 820px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-us h2,
+  .sets-us-apart h2 {
+    font-size: 30px;
+  }
+
+  .grey-container ul {
+    font-size: 20px;
+  }
+
+  .search-input {
+    width: auto;
+    font-size: 16px;
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem 0;
+  }
+
+  .search-input {
+    width: 250px;
+    margin-right: 10px;
+  }
+
+  .right {
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .about-title {
+    display: none;
+  }
+
+  .cart-icon {
+    font-size: 1.5rem;
+    margin-left: 10px;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  footer .hours,
+  footer p {
+    font-size: 18px;
+  }
+
+  footer .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
