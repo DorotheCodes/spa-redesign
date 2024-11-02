@@ -1,7 +1,7 @@
 SPA REDESIGN 🧖🏾‍♀️
 
 PROJECT DESCRIPTION 📝
-This project is a modern, responsive redesign of an existing spa website's about us page, created to improve user experience and visual appeal. Complete redesign of an existing spa website to improve visual design, accessibility, and user navigation. The redesign emphasizes a calming user interface, ease of navigation, and accessibility improvements, all intended to create a relaxing and welcoming online presence.
+This project is a modern, responsive redesign of an existing spa website's about us page, created to improve user experience and visual appeal. The redesign emphasizes a calming user interface, ease of navigation, and accessibility improvements, all intended to create a relaxing and welcoming online presence.
 
 Original Website: For anyone interested in comparing, the original website used as a reference can be viewed here: https://spabelles.com/about-us
 
