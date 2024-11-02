@@ -1,5 +1,10 @@
 SPA REDESIGN 🧖🏾‍♀️
 
+SCREENSHOTS 📷 
+![spa-redesignn](https://github.com/user-attachments/assets/57b76c70-6226-43cc-803e-e5912d76ae86)
+
+DEMO 🌐 Try out the Weather App live at: [https://weather-forecast123.netlify.app](https://spa-redesign.netlify.app)
+
 PROJECT DESCRIPTION 📝
 This project is a modern, responsive redesign of an existing spa website's about us page, created to improve user experience and visual appeal. The redesign emphasizes a calming user interface, ease of navigation, and accessibility improvements, all intended to create a relaxing and welcoming online presence.
 
